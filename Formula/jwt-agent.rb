@@ -10,9 +10,11 @@ class JwtAgent < Formula
 
   bottle do
     root_url "https://github.com/takuya-isbs/homebrew-taptest/releases/download/jwt-agent-1.1.1"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "44e9fd35fe50c9319766cfd1682031a2f6bea3556a8848e304cc0c60746c062a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3e544a259bc85cf6f5bfb619a76bcbc90552d9e308efc48dbfbbf441017f8e65"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e11669f7ad062375f1acecb3aaecddd3a327df5850fb470c9e4917e72bded62f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4a9e7a9047f6008d6a3f983425a561953cb05ae6060ba475bc855d6416e2d823"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "32b70098430440f1e085545ad4a9985c838eb44ffced0385f7e473f42c1b9575"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5565d3b8b65a222a0029989e40a57b13f939bdc207a045b921551d4d49b95d24"
   end
 
   depends_on "go" => :build
