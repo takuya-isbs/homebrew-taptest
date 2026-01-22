@@ -1,7 +1,6 @@
 class JwtAgent < Formula
   desc "Obtain a JSON Web Token (JWT) from a JWT server"
   homepage "https://github.com/oss-tsukuba/jwt-agent"
-
   url "https://github.com/oss-tsukuba/jwt-agent/archive/refs/tags/1.1.1.tar.gz"
 
   # shasum -a 256

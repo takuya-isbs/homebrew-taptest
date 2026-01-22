@@ -16,6 +16,7 @@ do
   formula="${fname%.rb}"
   brew install "${TAP}/${formula}"
   brew audit --formula "${TAP}/${formula}"
+  brew test "${TAP}/${formula}"
   if [[ "${UNINSTALL:-0}" = 1 ]]
   then
     brew uninstall "${formula}"
