@@ -6,19 +6,18 @@ set -x
 #   ./check-before-push.sh USERNAME/
 
 # local TAP (brew tap)
-TAP=$1
+TAP="$1"
 
-formula_list() {
-    ls -1 Formula/*.rb | sed -e 's/.*\///' -e 's/\.rb$//'
-}
+brew style "${TAP}"
 
-brew style ./Formula/
-
-for name in $(formula_list); do
-    formula=${TAP}/${name}
-    brew install $formula
-    brew audit --formula $formula
-    if [ ${UNINSTALL:-0} = 1 ]; then
-	brew uninstall $name
-    fi
+for filepath in Formula/*.rb
+do
+  fname="${filepath##*/}"
+  formula="${fname%.rb}"
+  brew install "${TAP}/${formula}"
+  brew audit --formula "${TAP}/${formula}"
+  if [[ "${UNINSTALL:-0}" = 1 ]]
+  then
+    brew uninstall "${formula}"
+  fi
 done
