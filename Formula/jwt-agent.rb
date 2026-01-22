@@ -13,7 +13,7 @@ class JwtAgent < Formula
 
   def install
     system "make"
-    system "make", "install", "PREFIX=#{prefix}"
+    system "make", "install", "PREFIX=#{prefix}", "MANDIR=#{man}"
   end
 
   test do
