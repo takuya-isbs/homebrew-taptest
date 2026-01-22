@@ -8,6 +8,8 @@ set -x
 # local TAP (brew tap)
 TAP="$1"
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 brew style "${TAP}"
 
 for filepath in Formula/*.rb
