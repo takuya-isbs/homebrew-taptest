@@ -8,6 +8,13 @@ class JwtAgent < Formula
 
   license "BSD-3-Clause"
 
+  bottle do
+    root_url "https://github.com/takuya-isbs/homebrew-taptest/releases/download/jwt-agent-1.1.1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "44e9fd35fe50c9319766cfd1682031a2f6bea3556a8848e304cc0c60746c062a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3e544a259bc85cf6f5bfb619a76bcbc90552d9e308efc48dbfbbf441017f8e65"
+  end
+
   depends_on "go" => :build
 
   def install
