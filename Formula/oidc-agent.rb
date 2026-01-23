@@ -7,6 +7,12 @@ class OidcAgent < Formula
   sha256 "21d670851df8a726a9a8e620ec4557c3fd9cc490a06a57ddddfc5a9bdc8f9df0"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/takuya-isbs/homebrew-taptest/releases/download/oidc-agent-5.3.4"
+    sha256 arm64_tahoe:   "0347f7ebd95b69990392bbbb61f1719777146273a1e0794dc6f8a1d8e05de5ee"
+    sha256 arm64_sequoia: "d923ec4a01181f97e35a0f73747993734081b0005053426e60a9f652c1ac2d43"
+  end
+
   depends_on "help2man" => :build
   depends_on "argp-standalone"
   depends_on "jq"
